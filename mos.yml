@@ -20,7 +20,8 @@ filesystem:
 libs:
   - origin: https://github.com/zsvo/boards
   - origin: https://github.com/zsvo/js-demo-bundle
-
+  - origin: https://github.com/zsvo/demo-bundle
+  
 conds:
   # It's not that we can't work with multicore
   # but we cannot afford it because of space (32K).
