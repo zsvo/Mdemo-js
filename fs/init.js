@@ -1,5 +1,5 @@
 load('api_aws.js');
-load('api_azure.js');
+// load('api_azure.js');
 load('api_config.js');
 load('api_dash.js');
 load('api_events.js');
@@ -9,7 +9,7 @@ load('api_mqtt.js');
 load('api_shadow.js');
 load('api_timer.js');
 load('api_sys.js');
-load('api_watson.js');
+// load('api_watson.js');
 
 let btn = Cfg.get('board.btn1.pin');              // Built-in button GPIO
 let led = Cfg.get('board.led1.pin');              // Built-in LED GPIO number
@@ -31,7 +31,7 @@ let reportState = function() {
 };
 
 // Update state every second, and report to cloud if online
-Timer.set(1000, Timer.REPEAT, function() {
+Timer.set(4000, Timer.REPEAT, function() {
   state.uptime = Sys.uptime();
   state.ram_free = Sys.free_ram();
   print('online:', online, JSON.stringify(state));
