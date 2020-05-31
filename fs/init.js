@@ -96,7 +96,8 @@ if (btn >= 0) {
       let topic = 'devices/' + Cfg.get('device.id') + '/events';
       print('== Publishing to ' + topic + ':', message);
       MQTT.pub(topic, message, 0 /* QoS */);
-    } else if (sendMQTT) {
+    } 
+    else if (sendMQTT) {
       print('== Not connected!');
     }
   }, null);
