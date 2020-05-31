@@ -71,21 +71,21 @@ if (btn >= 0) {
     state.btnCount++;
     let message = JSON.stringify(state);
     let sendMQTT = true;
-    if (Azure.isConnected()) {
-      print('== Sending Azure D2C message:', message);
-      Azure.sendD2CMsg('', message);
-      sendMQTT = false;
-    }
+//    if (Azure.isConnected()) {
+//      print('== Sending Azure D2C message:', message);
+//      Azure.sendD2CMsg('', message);
+//      sendMQTT = false;
+//    }
     if (GCP.isConnected()) {
       print('== Sending GCP event:', message);
       GCP.sendEvent(message);
       sendMQTT = false;
     }
-    if (Watson.isConnected()) {
-      print('== Sending Watson event:', message);
-      Watson.sendEventJSON('ev', {d: state});
-      sendMQTT = false;
-    }
+//    if (Watson.isConnected()) {
+//      print('== Sending Watson event:', message);
+//      Watson.sendEventJSON('ev', {d: state});
+//      sendMQTT = false;
+//    }
     if (Dash.isConnected()) {
       print('== Click!');
       // TODO: Maybe do something else?
